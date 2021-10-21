@@ -28,7 +28,7 @@ const Launch = () => {
             <Link className="homeBtn" to="/"><h3>Home</h3></Link>
             <div className="mission-name">{data.launch.mission_name}</div>
             {data.launch.launch_date_utc}
-            {data.launch.links.video_link ? <div><a href={data.launch.links.video_link} >Watch Here</a></div> : <Link to='/error'></Link>}
+            {data.launch.links.video_link ? <div><a href={data.launch.links.video_link} >Watch Here</a></div> : <Link to='/error'>Watch Here</Link>}
             <h3>LAUNCH DETAILS</h3>
             <div className="gallery">
                 {data.launch.links.flickr_images.map((image) => (

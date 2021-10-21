@@ -24,6 +24,18 @@ div{
   object-fit: cover;
 }
 
+.error{
+  width:100vw;
+  height:100vw;
+  overflow:hidden;
+}
+
+.error *{
+  position:relative;
+  top:17%;
+  font-size:xx-large;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
