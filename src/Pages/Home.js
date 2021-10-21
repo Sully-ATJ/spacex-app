@@ -17,7 +17,7 @@ const Home = () => {
     });
 
     if(isLoading) return "Loading...";
-    if(error) return <Link to='/error'>{error.message}</Link>
+    if(error) return <Link to='/error'></Link>
     return (
         <div>
             <h1>SpaceX Launches</h1>
