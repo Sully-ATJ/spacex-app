@@ -7,6 +7,19 @@
   pointer-events: none;
 }
 
+.gallery{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 10px;
+}
+
+.api-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
