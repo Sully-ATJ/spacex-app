@@ -17,12 +17,13 @@ const Home = () => {
     });
 
     if(isLoading) return "Loading...";
-    if(error) return <pre>{error.message}</pre>
+    if(error) return <Link to='/error'>{error.message}</Link>
     return (
         <div>
-            <h2>SpaceX Launches</h2>
+            <h1>SpaceX Launches</h1>
             <div className="gallery">
                 {data.launchesPast.map((launch) => (
+                    launch.links.flickr_images.length > 0 &&
                         <Link to={{pathname: `/launch/${launch.id}`}}>
                             <img  className="api-img" alt=" " src={launch.links.flickr_images}/>
                         </Link>

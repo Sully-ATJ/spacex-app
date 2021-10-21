@@ -2,9 +2,13 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.homeBtn{
+  float:left;
+  margin-left: 10px;
+}
+
+div{
+  clear:both;
 }
 
 .gallery{

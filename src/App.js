@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {Route, BrowserRouter as Router,Switch,Link} from 'react-router-dom';
+import {Route, BrowserRouter as Router,Switch} from 'react-router-dom';
 import Home from "./Pages/Home";
 import Launch from "./Pages/Launch";
 import ErrorPage from "./Pages/404";
@@ -8,13 +8,6 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <div className="nav">
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-          </ul>
-        </div>
         <Switch>
           <Route path="/" exact component={Home}/>
           <Route path="/launch/:id" component={Launch}/>

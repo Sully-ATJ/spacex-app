@@ -1,6 +1,6 @@
 import React from 'react';
 import { request, gql } from "graphql-request";
-import { useParams } from 'react-router-dom';
+import { useParams,Link } from 'react-router-dom';
 import { useQuery } from "react-query";
 
 
@@ -22,13 +22,14 @@ const Launch = () => {
     });
 
     if(isLoading) return "Loading...";
-    if(error) return <pre>{error.message}</pre>
+    if(error) return <Link to='/error'>{error.message}</Link>
     return (
         <div>
+            <Link className="homeBtn" to="/"><h3>Home</h3></Link>
             <div className="mission-name">{data.launch.mission_name}</div>
             {data.launch.launch_date_utc}
             <div><a href={data.launch.links.video_link} >Watch Here</a></div>
-            <h4>LAUNCH DETAILS</h4>
+            <h3>LAUNCH DETAILS</h3>
             <div className="gallery">
                 {data.launch.links.flickr_images.map((image) => (
                     <img  className="api-img" alt=" " src={image}/>
